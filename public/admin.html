@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin Page</title>
+</head>
+<body>
+    <div>
+        <input id="input" type="text">
+        <button id="btn">send</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>const socket = io()
+    document.getElementById('btn').addEventListener('click',()=>{
+       const message = document.getElementById('input').value
+
+       socket.emit('msg',message)
+    })
+    </script>
+</body>
+</html>

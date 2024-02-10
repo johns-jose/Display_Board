@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Board</title>
+</head>
+<body>
+    <h1 id="board"  style="text-align: center;">Dispaly Board</h1>
+    <script src="/socket.io/socket.io.js"></script>
+    <script> const socket = io()
+    socket.on('replay',(text)=>{
+        document.getElementById('board').innerHTML = text
+
+    })
+    </script>
+</body>
+</html>
